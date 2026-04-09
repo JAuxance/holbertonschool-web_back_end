@@ -1,12 +1,12 @@
-#!/usr/bin/python3
-"""Basic async syntax utilities."""
+#!/usr/bin/env python3
+"""Basic async function syntax."""
 
+import random
 import asyncio
-from random import uniform
 
 
 async def wait_random(max_delay: int = 10) -> float:
-    """Wait for a random delay between 0 and max_delay."""
-    delay = uniform(0, max_delay)
+    """Wait for a random delay and return it."""
+    delay = random.uniform(0, max_delay)
     await asyncio.sleep(delay)
     return delay
