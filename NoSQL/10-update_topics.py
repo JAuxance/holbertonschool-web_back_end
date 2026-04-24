@@ -1,0 +1,11 @@
+#!/usr/bin/env python3
+"""Module providing MongoDB queries for a school collection."""
+
+
+def update_topics(mongo_collection, name, topics):
+    """Update the topics of a document in a collection."""
+    result = mongo_collection.update_many(
+        {"name": name},
+        {"$set": {"topics": topics}}
+    )
+    return result.modified_count
