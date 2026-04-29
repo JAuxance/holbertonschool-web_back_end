@@ -1,33 +1,53 @@
+/**
+ * A Holberton class identified by its starting year and location.
+ */
 export class HolbertonClass {
+    /**
+     * @param {number} year - Class year.
+     * @param {string} location - Class location.
+     */
     constructor(year, location) {
         this._year = year;
         this._location = location;
     }
 
+    /** @returns {number} The class year. */
     get year() {
         return this._year;
     }
 
+    /** @returns {string} The class location. */
     get location() {
         return this._location;
     }
 }
 
+/**
+ * A Holberton student, attached to a {@link HolbertonClass}.
+ */
 export class StudentHolberton {
+    /**
+     * @param {string} firstName - Student's first name.
+     * @param {string} lastName - Student's last name.
+     * @param {HolbertonClass} holbertonClass - The class the student belongs to.
+     */
     constructor(firstName, lastName, holbertonClass) {
         this._firstName = firstName;
         this._lastName = lastName;
         this._holbertonClass = holbertonClass;
     }
 
+    /** @returns {string} `"FirstName LastName"`. */
     get fullName() {
         return `${this._firstName} ${this._lastName}`;
     }
 
+    /** @returns {HolbertonClass} The student's class. */
     get holbertonClass() {
         return this._holbertonClass;
     }
 
+    /** @returns {string} `"FirstName LastName - year - location"`. */
     get fullStudentDescription() {
         return `${this._firstName} ${this._lastName} - ${this._holbertonClass.year} - ${this._holbertonClass.location}`;
     }

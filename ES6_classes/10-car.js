@@ -1,24 +1,36 @@
+/**
+ * Represents a car defined by its brand, motor and color.
+ */
 class Car {
+    /**
+     * @param {string} brand - Car brand.
+     * @param {string} motor - Motor type.
+     * @param {string} color - Car color.
+     */
     constructor(brand, motor, color) {
         this._brand = brand;
         this._motor = motor;
         this._color = color;
     }
 
+    /** @returns {string} The car brand. */
     get brand() {
         return this._brand;
     }
 
+    /** @returns {string} The motor type. */
     get motor() {
         return this._motor;
     }
 
+    /** @returns {string} The car color. */
     get color() {
         return this._color;
     }
+
     /**
-     * This method returns a new instance of the Car class with the same properties as the current instance.
-     * @returns {Car} A new Car instance with the same brand, motor, and color as the current instance.
+     * Returns a new instance of `Car` with the same properties as this one.
+     * @returns {Car} A clone of the current instance.
      */
     coloneCar() {
         return new Car(this._brand, this._motor, this._color);

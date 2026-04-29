@@ -1,3 +1,8 @@
+/**
+ * Builds a multi-line description of San Francisco's economy
+ * using ES6 template literals for interpolation.
+ * @returns {string} The formatted description.
+ */
 export default function getSanFranciscoDescription() {
     const year = 2017;
     const budget = {
