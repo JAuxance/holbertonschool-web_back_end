@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 app.get('/students', (req, res) => {
   const lines = ['This is the list of our students'];
   const originalLog = console.log;
-  console.log = (msg) => { lines.push(msg); };
+  console.log = (msg) => lines.push(msg);
 
   countStudents(database)
     .then(() => {
