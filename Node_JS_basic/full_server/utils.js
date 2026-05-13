@@ -1,4 +1,4 @@
-import fs from 'fs';
+const fs = require('fs');
 
 const readDatabase = (filePath) => new Promise((resolve, reject) => {
   fs.readFile(filePath, 'utf-8', (err, data) => {
@@ -21,4 +21,4 @@ const readDatabase = (filePath) => new Promise((resolve, reject) => {
   });
 });
 
-export default readDatabase;
+module.exports = readDatabase;

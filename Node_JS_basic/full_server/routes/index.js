@@ -1,5 +1,5 @@
-import AppController from '../controllers/AppController';
-import StudentsController from '../controllers/StudentsController';
+const AppController = require('../controllers/AppController');
+const StudentsController = require('../controllers/StudentsController');
 
 const router = (app) => {
   app.get('/', AppController.getHomepage);
@@ -7,4 +7,4 @@ const router = (app) => {
   app.get('/students/:major', StudentsController.getAllStudentsByMajor);
 };
 
-export default router;
+module.exports = router;
